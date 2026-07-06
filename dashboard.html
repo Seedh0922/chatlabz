@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dashboard — Chatlabz</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="dashboard">
+	<aside class="dashboard-sidebar">
+		<div class="dashboard-sidebar__header">
+			<a href="index.html" class="logo">
+				<span class="logo__icon">C</span>
+				Chatlabz
+			</a>
+		</div>
+		<nav class="dashboard-sidebar__nav">
+			<p class="sidebar-label">Data Sources</p>
+			<a href="#" class="sidebar-link is-active" data-source="files">
+				<span class="sidebar-link__icon">📁</span> Files
+			</a>
+			<a href="#" class="sidebar-link" data-source="text">
+				<span class="sidebar-link__icon">✏️</span> Text
+			</a>
+			<a href="#" class="sidebar-link" data-source="website">
+				<span class="sidebar-link__icon">🌐</span> Website
+			</a>
+			<a href="#" class="sidebar-link" data-source="notion">
+				<span class="sidebar-link__icon">📝</span> Notion
+			</a>
+			<p class="sidebar-label" style="margin-top:24px;">Manage</p>
+			<a href="#" class="sidebar-link">
+				<span class="sidebar-link__icon">🤖</span> My Chatbots
+			</a>
+			<a href="pricing.html" class="sidebar-link">
+				<span class="sidebar-link__icon">💳</span> Billing
+			</a>
+			<a href="#" class="sidebar-link">
+				<span class="sidebar-link__icon">⚙️</span> Settings
+			</a>
+		</nav>
+	</aside>
+
+	<div class="dashboard-main">
+		<header class="dashboard-topbar">
+			<h1 class="dashboard-topbar__title">Data Sources</h1>
+			<div style="display:flex;align-items:center;gap:12px;">
+				<span style="font-size:13px;color:var(--text-muted);">demo@chatlabz.com</span>
+				<a href="index.html" class="btn btn--ghost btn--sm">Sign out</a>
+			</div>
+		</header>
+
+		<div class="dashboard-body">
+			<div class="dashboard-content">
+				<div class="source-tabs">
+					<button class="source-tab is-active" data-tab="files">Files</button>
+					<button class="source-tab" data-tab="text">Text</button>
+					<button class="source-tab" data-tab="website">Website</button>
+					<button class="source-tab" data-tab="notion">Notion</button>
+				</div>
+
+				<!-- Files Panel -->
+				<div class="source-panel is-active" id="panel-files">
+					<div class="dropzone" id="dropzone">
+						<div class="dropzone__icon">📤</div>
+						<p class="dropzone__title">Drag &amp; drop files here</p>
+						<p class="dropzone__desc">or click to browse your computer</p>
+						<div class="dropzone__formats">
+							<span class="format-tag">PDF</span>
+							<span class="format-tag">DOCX</span>
+							<span class="format-tag">TXT</span>
+							<span class="format-tag">CSV</span>
+						</div>
+					</div>
+					<input type="file" id="file-input" multiple accept=".pdf,.docx,.txt,.csv" hidden>
+					<div class="file-list" id="file-list-section">
+						<p class="file-list__title">Already Included Files</p>
+						<div id="file-list"></div>
+					</div>
+				</div>
+
+				<!-- Text Panel -->
+				<div class="source-panel" id="panel-text">
+					<p style="font-size:14px;color:var(--text-muted);margin-bottom:16px;">Paste or type text content directly. This will be used to train your chatbot.</p>
+					<textarea class="text-area" id="text-source" placeholder="Enter your FAQ, product descriptions, policies, or any text content here…"></textarea>
+				</div>
+
+				<!-- Website Panel -->
+				<div class="source-panel" id="panel-website">
+					<p style="font-size:14px;color:var(--text-muted);margin-bottom:16px;">Enter your website URL to crawl pages and extract content for your chatbot.</p>
+					<div class="url-input-group">
+						<input type="url" class="form-input" id="website-url" placeholder="https://yourwebsite.com">
+						<button class="btn btn--primary" id="crawl-btn">Crawl Links</button>
+					</div>
+					<div class="file-list">
+						<p class="file-list__title">Included Links</p>
+						<div id="link-list"></div>
+					</div>
+				</div>
+
+				<!-- Notion Panel -->
+				<div class="source-panel" id="panel-notion">
+					<div class="notion-connect">
+						<div class="notion-connect__icon">📝</div>
+						<h3 style="font-size:1.125rem;font-weight:700;margin-bottom:8px;">Connect Notion</h3>
+						<p style="font-size:14px;color:var(--text-muted);margin-bottom:24px;max-width:360px;margin-left:auto;margin-right:auto;">Link your Notion workspace to import pages and databases as chatbot training data.</p>
+						<button class="btn btn--outline" onclick="showToast('Notion OAuth would open here')">Connect to Notion</button>
+					</div>
+				</div>
+			</div>
+
+			<aside class="dashboard-panel">
+				<div class="panel-card">
+					<h3 class="panel-card__title">Data Sources</h3>
+					<div class="panel-stat">
+						<p class="panel-stat__label">Total Characters counted</p>
+						<p class="panel-stat__value" id="char-count">0</p>
+						<p class="panel-stat__limit">/ 11,000,000 limit</p>
+						<div class="progress-bar">
+							<div class="progress-bar__fill" id="progress-fill" style="width:0.5%"></div>
+						</div>
+					</div>
+					<button class="btn btn--primary" id="create-chatbot" style="width:100%;padding:14px;font-size:15px;">
+						Create Chatbot
+					</button>
+				</div>
+			</aside>
+		</div>
+	</div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

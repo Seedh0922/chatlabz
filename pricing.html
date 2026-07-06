@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pricing — Chatlabz</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+	<div class="container site-header__inner">
+		<a href="index.html" class="logo">
+			<span class="logo__icon">C</span>
+			Chatlabz
+		</a>
+		<nav class="site-nav">
+			<a href="index.html#resources">Resources</a>
+			<a href="dashboard.html">Chatbots</a>
+			<a href="pricing.html" class="is-active">Pricing</a>
+		</nav>
+		<div class="site-header__actions">
+			<button class="btn btn--ghost" data-open-signin>Sign in</button>
+			<button class="btn btn--primary" data-open-signin>Get started free</button>
+		</div>
+	</div>
+</header>
+
+<main>
+	<section class="section" style="padding-top:64px;">
+		<div class="container">
+			<div class="section__header">
+				<p class="section__label">Pricing</p>
+				<h2 class="section__title">Simple, transparent pricing</h2>
+				<p class="section__desc">Start free and scale as you grow. No hidden fees.</p>
+			</div>
+			<div class="pricing-grid">
+				<article class="pricing-card">
+					<p class="pricing-card__name">Free</p>
+					<p class="pricing-card__price">$0 <span>/ month</span></p>
+					<p class="pricing-card__desc">Perfect for trying Chatlabz</p>
+					<ul class="pricing-card__features">
+						<li>1 chatbot</li>
+						<li>500 message credits / month</li>
+						<li>400,000 training characters</li>
+						<li>File &amp; website upload</li>
+						<li>Chatlabz branding</li>
+					</ul>
+					<button class="btn btn--outline" data-open-signin>Start free</button>
+				</article>
+				<article class="pricing-card pricing-card--featured">
+					<span class="pricing-card__badge">Most Popular</span>
+					<p class="pricing-card__name">Pro</p>
+					<p class="pricing-card__price">$49 <span>/ month</span></p>
+					<p class="pricing-card__desc">For growing businesses</p>
+					<ul class="pricing-card__features">
+						<li>5 chatbots</li>
+						<li>5,000 message credits / month</li>
+						<li>11,000,000 training characters</li>
+						<li>Notion integration</li>
+						<li>Custom instructions</li>
+						<li>Remove Chatlabz branding</li>
+						<li>Analytics dashboard</li>
+					</ul>
+					<button class="btn btn--primary" data-open-signin>Start 7-day trial</button>
+				</article>
+				<article class="pricing-card">
+					<p class="pricing-card__name">Enterprise</p>
+					<p class="pricing-card__price">Custom</p>
+					<p class="pricing-card__desc">For large teams &amp; agencies</p>
+					<ul class="pricing-card__features">
+						<li>Unlimited chatbots</li>
+						<li>Custom message credits</li>
+						<li>Unlimited training characters</li>
+						<li>API access</li>
+						<li>SSO &amp; team management</li>
+						<li>Priority support</li>
+						<li>Custom domain widget</li>
+					</ul>
+					<button class="btn btn--outline">Contact sales</button>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<section class="section section--muted" id="faq">
+		<div class="container">
+			<div class="section__header">
+				<h2 class="section__title">Pricing FAQ</h2>
+			</div>
+			<div class="faq">
+				<div class="faq-item">
+					<button class="faq-question">
+						Can I switch plans anytime?
+						<svg class="faq-question__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+					</button>
+					<div class="faq-answer">
+						<div class="faq-answer__inner">Yes. Upgrade or downgrade your plan at any time. Changes take effect immediately and billing is prorated.</div>
+					</div>
+				</div>
+				<div class="faq-item">
+					<button class="faq-question">
+						What happens when I exceed my character limit?
+						<svg class="faq-question__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+					</button>
+					<div class="faq-answer">
+						<div class="faq-answer__inner">You'll be notified when approaching your limit. You can remove old data sources or upgrade to a higher plan to add more training data.</div>
+					</div>
+				</div>
+				<div class="faq-item">
+					<button class="faq-question">
+						Is there a free trial for Pro?
+						<svg class="faq-question__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+					</button>
+					<div class="faq-answer">
+						<div class="faq-answer__inner">Yes. Pro comes with a 7-day free trial. No credit card required to start on the Free plan.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+<footer class="site-footer">
+	<div class="container">
+		<div class="footer-bottom" style="border:none;padding:0;">
+			<span>© 2026 Chatlabz. All rights reserved.</span>
+			<a href="index.html" class="btn btn--ghost btn--sm">← Back to home</a>
+		</div>
+	</div>
+</footer>
+
+<div class="modal-overlay" id="signin-modal" role="dialog" aria-modal="true">
+	<div class="modal" style="position:relative;">
+		<button class="modal__close" data-close-modal aria-label="Close">✕</button>
+		<h2 class="modal__title">Sign in to continue to Chatlabz</h2>
+		<p class="modal__subtitle">Build AI chatbots trained on your data</p>
+		<button class="btn btn--google" id="google-signin">
+			<svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+			Continue with Google
+		</button>
+		<div class="modal__divider">or</div>
+		<div class="form-group">
+			<label class="form-label" for="signin-email">Email address</label>
+			<input type="email" class="form-input" id="signin-email" placeholder="you@company.com">
+		</div>
+		<button class="btn btn--primary" id="email-signin" style="width:100%;padding:12px;">Sign in with Email</button>
+	</div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
