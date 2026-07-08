@@ -1,50 +1,50 @@
-# Chatlabz — AI Chatbot Craft Platform
+# Chatlabz — AIチャットボット構築プラットフォーム
 
-포트폴리오 영상 기반으로 제작한 **Chatlabz** 데모 사이트입니다.
+ポートフォリオ動画をもとに制作した **Chatlabz** のデモサイトです。
 
-## 페이지 구성
+## ページ構成
 
-| 페이지 | 파일 | 내용 |
-|--------|------|------|
-| 랜딩 + FAQ | `index.html` | 히어로, 기능 소개, FAQ 아코디언, 로그인 모달 |
-| 대시보드 | `dashboard.html` | 데이터 소스 관리 (Files / Text / Website / Notion) |
-| 요금제 | `pricing.html` | Free / Pro / Enterprise 플랜 |
+| ページ             | ファイル             | 内容                                        |
+| --------------- | ---------------- | ----------------------------------------- |
+| ランディングページ + FAQ | `index.html`     | ヒーローセクション、機能紹介、FAQアコーディオン、ログインモーダル        |
+| ダッシュボード         | `dashboard.html` | データソース管理（Files / Text / Website / Notion） |
+| 料金プラン           | `pricing.html`   | Free / Pro / Enterprise プラン               |
 
-## 미리보기
+## プレビュー
 
-브라우저에서 `index.html`을 직접 열면 됩니다.
+ブラウザで `index.html` を直接開いてご確認いただけます。
 
-```
+```text
 chatlabz/index.html
 ```
 
-또는 로컬 서버:
+または、ローカルサーバーを起動して確認することもできます。
 
 ```bash
 cd chatlabz
 npx serve .
 ```
 
-## 주요 기능 (데모)
+## 主な機能（デモ）
 
-- **FAQ 아코디언** — 영상에 나온 질문 목록 반영
-- **로그인 모달** — Google / Email 로그인 UI → 대시보드 이동
-- **파일 업로드** — Drag & Drop, PDF/DOCX/TXT/CSV
-- **웹사이트 크롤링** — URL 입력 → 링크 목록 추가
-- **문자 수 카운터** — 11,000,000 한도 표시
-- **Create Chatbot** 버튼
+* **FAQアコーディオン** — 動画内の質問一覧を反映
+* **ログインモーダル** — Google / Email ログインUIからダッシュボードへ遷移
+* **ファイルアップロード** — ドラッグ＆ドロップ対応（PDF / DOCX / TXT / CSV）
+* **Webサイトクロール** — URL入力によるリンク一覧の追加
+* **文字数カウンター** — 上限11,000,000文字を表示
+* **「Create Chatbot」ボタン**
 
-## 기술 스택 (원본 프로젝트)
+## 技術スタック（オリジナルプロジェクト）
 
-- React + TypeScript + Vite
-- React Query (`@tanstack/react-query`)
-- Tailwind CSS
+* React + TypeScript + Vite
+* React Query（`@tanstack/react-query`）
+* Tailwind CSS
 
-> 이 데모는 포트폴리오용 정적 HTML/CSS/JS 버전입니다.
+> 本デモは、ポートフォリオ向けに作成した静的な HTML / CSS / JavaScript 版です。
 
-## 파일 구조
+## ディレクトリ構成
 
-```
+```text
 chatlabz/
 ├── index.html
 ├── dashboard.html
